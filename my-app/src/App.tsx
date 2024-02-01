@@ -106,15 +106,19 @@ function App() {
                   >
                     Add todo
                   </button>
-  
                   {/* ADD TODO END */}
+
+                  {/* UPDATE TODO START */}
                   <button
                     className="text-white mx-1 text-lg border-solid border-2 border-white p-1"
                     onClick={handleUpdate}
                   >
                     Update
                   </button>
-  
+                  {/* UPDATE TODO END */}
+
+
+                  {/* RADIO TODO */}
                   <div className="flex items-center">
                     <input 
                       type="radio" 
@@ -127,7 +131,8 @@ function App() {
                     </input>
                     <label className="ms-2 text-sm font-medium text-white">To do</label>
                   </div>
-  
+
+                  {/* IMPROGRESS TODO */}
                   <div className="flex items-center">
                       <input 
                         type="radio" 
@@ -141,6 +146,7 @@ function App() {
                       <label className="ms-2 text-sm font-medium text-white mt-3 mb-3">Inprogress</label>
                   </div>
   
+                  {/* DONE TODO */}
                   <div className="flex items-center">
                       <input 
                         type="radio" 
@@ -155,6 +161,8 @@ function App() {
                   </div>
                 </span>
             )}
+
+            {/* EDIT + DELETE START */}
               <div className="bg-red-400 p-3">
                 <div className=" text-white">
                   {tasks.map((task, id) => (
@@ -182,8 +190,11 @@ function App() {
                     </div>
                 </div>
               </div>
+            {/* EDIT + DELETE START */}
+            
+
             </div>
-            {/* cột 2 cột Improgress */}
+            {/* COL 2 LISTIMPROGRESS*/}
             <div className="col-span-2 bg-red-400 text-white pt-5 text-left pl-1 pr-10 pb-5 ">
               <div>
                 <h1 className="text-3xl font-bold pl-32">In Progress</h1>
@@ -200,7 +211,7 @@ function App() {
                 </div>
               </div>
             </div>
-            {/* cột 3  ListDone*/}
+            {/* COL 3 LISTDONE*/}
             <div className="col-span-2 bg-red-400 text-white pt-5 text-left pl-1 pr-10 pb-5 ">
               <div>
                 <h1 className="text-3xl font-bold pl-32">Done</h1>
